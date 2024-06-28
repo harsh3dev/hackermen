@@ -9,12 +9,18 @@ contract TokenMaster is ERC721 {
     address public owner;
     uint256 public totalOccasions;
     uint256 public totalSupply;
+    
+    struct Ticket {
+        uint256 id;
+        uint256 price;
+        address originalOwner;
+    }
 
     struct Occasion {
         uint256 id;
         string name;
         uint256 cost;
-        uint256 tickets;
+        uint256[] ticketIds;
         uint256 maxTickets;
         string date;
         string time;
@@ -46,21 +52,25 @@ contract TokenMaster is ERC721 {
         string memory _date,
         string memory _time,
         string memory _location
-    ) public onlyOwner {
+    ) public  {
         totalOccasions++;
-        occasions[totalOccasions] = Occasion(
-            totalOccasions,
-            _name,
-            _cost,
-            _maxTickets,
-            _maxTickets,
-            _date,
-            _time,
-            _location
-        );
+        Occasion storage newEvent = occasion[totalOccasions];
+        newEvent.id=totalOccasions,
+        newEvent.name=_name,
+        for(uint256 i = 0; i < ticketPrices.length; i++){
+        ticketCounter++;
+        uint256 ticketId = ticketCounter;
+        _mint(msg.sender, ticketId);  
+        tickets[ticketId] = Ticket(ticketId, ticketPrices[i], msg.sender, qrCodeURIs[i]);
+        newEvent.ticketIds.push(ticketId);
+        }
+        newEvent.date=_date,
+        newEvent.time=_time,
+        newEvent.location=_location,
+        newEvent.owner= msg.sender
     }
 
-    function mint(uint256 _id, uint256 _seat) public payable {
+    function mint(uint25600 _id, uint256 _seat) public payable {
         // Require that _id is not 0 or less than total occasions...
         require(_id != 0);
         require(_id <= totalOccasions);
