@@ -2,7 +2,7 @@
     {
       "eventName": "Rock Fest",
       "location": "Los Angeles, CA",
-      "ticketPrice": "$120",
+      "ticketPrice": "120",
       "totalSeats": 5000,
       "remainingSeats": 2500,
       "artist": "The Rockers",
@@ -13,7 +13,7 @@
     {
       "eventName": "Jazz Night",
       "location": "New Orleans, LA",
-      "ticketPrice": "$80",
+      "ticketPrice": "80",
       "totalSeats": 3000,
       "remainingSeats": 1500,
       "artist": "Smooth Jazz Band",
@@ -24,7 +24,7 @@
     {
       "eventName": "Pop Extravaganza",
       "location": "New York, NY",
-      "ticketPrice": "$150",
+      "ticketPrice": "150",
       "totalSeats": 6000,
       "remainingSeats": 3000,
       "artist": "Pop Sensations",
@@ -35,7 +35,7 @@
     {
       "eventName": "Country Music Fest",
       "location": "Nashville, TN",
-      "ticketPrice": "$100",
+      "ticketPrice": "100",
       "totalSeats": 4000,
       "remainingSeats": 2000,
       "artist": "Country Stars",
@@ -46,7 +46,7 @@
     {
       "eventName": "Electronic Dance Party",
       "location": "Miami, FL",
-      "ticketPrice": "$130",
+      "ticketPrice": "130",
       "totalSeats": 7000,
       "remainingSeats": 3500,
       "artist": "DJ Electro",
@@ -57,7 +57,7 @@
     {
       "eventName": "Indie Vibes",
       "location": "Austin, TX",
-      "ticketPrice": "$90",
+      "ticketPrice": "90",
       "totalSeats": 3500,
       "remainingSeats": 1750,
       "artist": "Indie Collective",
@@ -68,7 +68,7 @@
     {
       "eventName": "Hip Hop Beats",
       "location": "Chicago, IL",
-      "ticketPrice": "$110",
+      "ticketPrice": "110",
       "totalSeats": 4500,
       "remainingSeats": 2250,
       "artist": "Hip Hop Kings",
@@ -79,7 +79,7 @@
     {
       "eventName": "Classical Evening",
       "location": "Boston, MA",
-      "ticketPrice": "$70",
+      "ticketPrice": "70",
       "totalSeats": 2500,
       "remainingSeats": 1250,
       "artist": "Symphony Orchestra",
@@ -90,7 +90,7 @@
     {
       "eventName": "Reggae Night",
       "location": "San Francisco, CA",
-      "ticketPrice": "$85",
+      "ticketPrice": "85",
       "totalSeats": 2800,
       "remainingSeats": 1400,
       "artist": "Reggae Legends",
@@ -101,7 +101,7 @@
     {
       "eventName": "Blues Festival",
       "location": "Memphis, TN",
-      "ticketPrice": "$95",
+      "ticketPrice": "95",
       "totalSeats": 3200,
       "remainingSeats": 1600,
       "artist": "Blues Masters",
@@ -112,7 +112,7 @@
     {
       "eventName": "Rock Fest",
       "location": "Seattle, WA",
-      "ticketPrice": "$120",
+      "ticketPrice": "120",
       "totalSeats": 5000,
       "remainingSeats": 2500,
       "artist": "The Rockers",
@@ -123,7 +123,7 @@
     {
       "eventName": "Jazz Night",
       "location": "Houston, TX",
-      "ticketPrice": "$80",
+      "ticketPrice": "80",
       "totalSeats": 3000,
       "remainingSeats": 1500,
       "artist": "Smooth Jazz Band",
@@ -134,7 +134,7 @@
     {
       "eventName": "Pop Extravaganza",
       "location": "Atlanta, GA",
-      "ticketPrice": "$150",
+      "ticketPrice": "150",
       "totalSeats": 6000,
       "remainingSeats": 3000,
       "artist": "Pop Sensations",
@@ -145,7 +145,7 @@
     {
       "eventName": "Country Music Fest",
       "location": "Dallas, TX",
-      "ticketPrice": "$100",
+      "ticketPrice": "100",
       "totalSeats": 4000,
       "remainingSeats": 2000,
       "artist": "Country Stars",
@@ -156,7 +156,7 @@
     {
       "eventName": "Electronic Dance Party",
       "location": "Las Vegas, NV",
-      "ticketPrice": "$130",
+      "ticketPrice": "130",
       "totalSeats": 7000,
       "remainingSeats": 3500,
       "artist": "DJ Electro",
@@ -167,7 +167,7 @@
     {
       "eventName": "Indie Vibes",
       "location": "Portland, OR",
-      "ticketPrice": "$90",
+      "ticketPrice": "90",
       "totalSeats": 3500,
       "remainingSeats": 1750,
       "artist": "Indie Collective",
@@ -178,7 +178,7 @@
     {
       "eventName": "Hip Hop Beats",
       "location": "Philadelphia, PA",
-      "ticketPrice": "$110",
+      "ticketPrice": "110",
       "totalSeats": 4500,
       "remainingSeats": 2250,
       "artist": "Hip Hop Kings",
@@ -189,7 +189,7 @@
     {
       "eventName": "Classical Evening",
       "location": "Washington, DC",
-      "ticketPrice": "$70",
+      "ticketPrice": "70",
       "totalSeats": 2500,
       "remainingSeats": 1250,
       "artist": "Symphony Orchestra",
@@ -200,7 +200,7 @@
     {
       "eventName": "Reggae Night",
       "location": "Denver, CO",
-      "ticketPrice": "$85",
+      "ticketPrice": "85",
       "totalSeats": 2800,
       "remainingSeats": 1400,
       "artist": "Reggae Legends",
@@ -211,7 +211,7 @@
     {
       "eventName": "Blues Festival",
       "location": "Detroit, MI",
-      "ticketPrice": "$95",
+      "ticketPrice": "95",
       "totalSeats": 3200,
       "remainingSeats": 1600,
       "artist": "Blues Masters",
@@ -222,7 +222,7 @@
     {
       "eventName": "Rock Fest",
       "location": "San Diego, CA",
-      "ticketPrice": "$120",
+      "ticketPrice": "120",
       "totalSeats": 5000,
       "remainingSeats": 2500,
       "artist": "The Rockers",
@@ -233,7 +233,7 @@
     {
       "eventName": "Jazz Night",
       "location": "Phoenix, AZ",
-      "ticketPrice": "$80",
+      "ticketPrice": "80",
       "totalSeats": 3000,
       "remainingSeats": 1500,
       "artist": "Smooth Jazz Band",
@@ -244,7 +244,7 @@
     {
       "eventName": "Pop Extravaganza",
       "location": "San Jose, CA",
-      "ticketPrice": "$150",
+      "ticketPrice": "150",
       "totalSeats": 6000,
       "remainingSeats": 3000,
       "artist": "Pop Sensations",
@@ -255,7 +255,7 @@
     {
       "eventName": "Country Music Fest",
       "location": "Indianapolis, IN",
-      "ticketPrice": "$100",
+      "ticketPrice": "100",
       "totalSeats": 4000,
       "remainingSeats": 2000,
       "artist": "Country Stars",
@@ -266,7 +266,7 @@
     {
       "eventName": "Electronic Dance Party",
       "location": "Charlotte, NC",
-      "ticketPrice": "$130",
+      "ticketPrice": "130",
       "totalSeats": 7000,
       "remainingSeats": 3500,
       "artist": "DJ Electro",
@@ -277,7 +277,7 @@
     {
       "eventName": "Indie Vibes",
       "location": "Baltimore, MD",
-      "ticketPrice": "$90",
+      "ticketPrice": "90",
       "totalSeats": 3500,
       "remainingSeats": 1750,
       "artist": "Indie Collective",
@@ -288,7 +288,7 @@
     {
       "eventName": "Hip Hop Beats",
       "location": "Columbus, OH",
-      "ticketPrice": "$110",
+      "ticketPrice": "110",
       "totalSeats": 4500,
       "remainingSeats": 2250,
       "artist": "Hip Hop Kings",
@@ -299,7 +299,7 @@
     {
       "eventName": "Classical Evening",
       "location": "Milwaukee, WI",
-      "ticketPrice": "$70",
+      "ticketPrice": "70",
       "totalSeats": 2500,
       "remainingSeats": 1250,
       "artist": "Symphony Orchestra",
@@ -310,7 +310,7 @@
     {
       "eventName": "Reggae Night",
       "location": "Kansas City, MO",
-      "ticketPrice": "$85",
+      "ticketPrice": "85",
       "totalSeats": 2800,
       "remainingSeats": 1400,
       "artist": "Reggae Legends",
@@ -321,7 +321,7 @@
     {
       "eventName": "Blues Festival",
       "location": "Louisville, KY",
-      "ticketPrice": "$95",
+      "ticketPrice": "95",
       "totalSeats": 3200,
       "remainingSeats": 1600,
       "artist": "Blues Masters",
@@ -332,7 +332,7 @@
     {
       "eventName": "Rock Fest",
       "location": "Tampa, FL",
-      "ticketPrice": "$120",
+      "ticketPrice": "120",
       "totalSeats": 5000,
       "remainingSeats": 2500,
       "artist": "The Rockers",
@@ -343,7 +343,7 @@
     {
       "eventName": "Jazz Night",
       "location": "St. Louis, MO",
-      "ticketPrice": "$80",
+      "ticketPrice": "80",
       "totalSeats": 3000,
       "remainingSeats": 1500,
       "artist": "Smooth Jazz Band",
@@ -354,7 +354,7 @@
     {
       "eventName": "Pop Extravaganza",
       "location": "Cleveland, OH",
-      "ticketPrice": "$150",
+      "ticketPrice": "150",
       "totalSeats": 6000,
       "remainingSeats": 3000,
       "artist": "Pop Sensations",
@@ -365,7 +365,7 @@
     {
       "eventName": "Country Music Fest",
       "location": "Pittsburgh, PA",
-      "ticketPrice": "$100",
+      "ticketPrice": "100",
       "totalSeats": 4000,
       "remainingSeats": 2000,
       "artist": "Country Stars",
@@ -376,7 +376,7 @@
     {
       "eventName": "Electronic Dance Party",
       "location": "Orlando, FL",
-      "ticketPrice": "$130",
+      "ticketPrice": "130",
       "totalSeats": 7000,
       "remainingSeats": 3500,
       "artist": "DJ Electro",
@@ -387,7 +387,7 @@
     {
       "eventName": "Indie Vibes",
       "location": "San Antonio, TX",
-      "ticketPrice": "$90",
+      "ticketPrice": "90",
       "totalSeats": 3500,
       "remainingSeats": 1750,
       "artist": "Indie Collective",
@@ -398,7 +398,7 @@
     {
       "eventName": "Hip Hop Beats",
       "location": "Cincinnati, OH",
-      "ticketPrice": "$110",
+      "ticketPrice": "110",
       "totalSeats": 4500,
       "remainingSeats": 2250,
       "artist": "Hip Hop Kings",
@@ -409,7 +409,7 @@
     {
       "eventName": "Classical Evening",
       "location": "Las Vegas, NV",
-      "ticketPrice": "$70",
+      "ticketPrice": "70",
       "totalSeats": 2500,
       "remainingSeats": 1250,
       "artist": "Symphony Orchestra",
@@ -420,7 +420,7 @@
     {
       "eventName": "Reggae Night",
       "location": "Buffalo, NY",
-      "ticketPrice": "$85",
+      "ticketPrice": "85",
       "totalSeats": 2800,
       "remainingSeats": 1400,
       "artist": "Reggae Legends",
@@ -431,7 +431,7 @@
     {
       "eventName": "Blues Festival",
       "location": "Salt Lake City, UT",
-      "ticketPrice": "$95",
+      "ticketPrice": "95",
       "totalSeats": 3200,
       "remainingSeats": 1600,
       "artist": "Blues Masters",
@@ -442,7 +442,7 @@
     {
       "eventName": "Rock Fest",
       "location": "Sacramento, CA",
-      "ticketPrice": "$120",
+      "ticketPrice": "120",
       "totalSeats": 5000,
       "remainingSeats": 2500,
       "artist": "The Rockers",
@@ -453,7 +453,7 @@
     {
       "eventName": "Jazz Night",
       "location": "Omaha, NE",
-      "ticketPrice": "$80",
+      "ticketPrice": "80",
       "totalSeats": 3000,
       "remainingSeats": 1500,
       "artist": "Smooth Jazz Band",
@@ -464,7 +464,7 @@
     {
       "eventName": "Pop Extravaganza",
       "location": "Minneapolis, MN",
-      "ticketPrice": "$150",
+      "ticketPrice": "150",
       "totalSeats": 6000,
       "remainingSeats": 3000,
       "artist": "Pop Sensations",
@@ -475,7 +475,7 @@
     {
       "eventName": "Country Music Fest",
       "location": "New Orleans, LA",
-      "ticketPrice": "$100",
+      "ticketPrice": "100",
       "totalSeats": 4000,
       "remainingSeats": 2000,
       "artist": "Country Stars",
@@ -486,7 +486,7 @@
     {
       "eventName": "Electronic Dance Party",
       "location": "Oklahoma City, OK",
-      "ticketPrice": "$130",
+      "ticketPrice": "130",
       "totalSeats": 7000,
       "remainingSeats": 3500,
       "artist": "DJ Electro",
@@ -497,7 +497,7 @@
     {
       "eventName": "Indie Vibes",
       "location": "Fort Worth, TX",
-      "ticketPrice": "$90",
+      "ticketPrice": "90",
       "totalSeats": 3500,
       "remainingSeats": 1750,
       "artist": "Indie Collective",
@@ -508,7 +508,7 @@
     {
       "eventName": "Hip Hop Beats",
       "location": "Nashville, TN",
-      "ticketPrice": "$110",
+      "ticketPrice": "110",
       "totalSeats": 4500,
       "remainingSeats": 2250,
       "artist": "Hip Hop Kings",
@@ -519,7 +519,7 @@
     {
       "eventName": "Classical Evening",
       "location": "Albuquerque, NM",
-      "ticketPrice": "$70",
+      "ticketPrice": "70",
       "totalSeats": 2500,
       "remainingSeats": 1250,
       "artist": "Symphony Orchestra",
@@ -530,7 +530,7 @@
     {
       "eventName": "Reggae Night",
       "location": "Birmingham, AL",
-      "ticketPrice": "$85",
+      "ticketPrice": "85",
       "totalSeats": 2800,
       "remainingSeats": 1400,
       "artist": "Reggae Legends",

@@ -7,11 +7,19 @@ const page = () => {
 
   return (
     <div className='text-white text-8xl font-extrabold w-full h-full flex flex-col items-center justify-center mt-20  '>
-      listticket
-      <span className='text-2xl text-center border rounded-lg'>{wallet.address} <br /> {wallet.chainID}</span>
+      
 
     </div>
   )
 }
 
 export default page
+
+// _name,
+// _cost,
+// _maxTickets,
+// _date,
+// _time,
+// _location
+// artist/org name
+// artis/ event socials
