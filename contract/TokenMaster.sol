@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 
 contract TokenMaster is ERC721 {
-    address public owner;
+    address public owner; //added
     uint256 public totalOccasions;
     uint256 public totalSupply;
     
