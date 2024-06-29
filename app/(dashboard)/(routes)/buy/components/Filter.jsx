@@ -11,7 +11,7 @@ export default function Filter() {
   const [priceRange, setPriceRange] = useState([50, 1500])
   const handlePriceChange = (value) => {
     setPriceRange(value)
-    dispatch(setPrice(priceRange))
+    // dispatch(setPrice(priceRange))
     setTimeout(() => {
       console.log(priceRange);
     }, 1000);
