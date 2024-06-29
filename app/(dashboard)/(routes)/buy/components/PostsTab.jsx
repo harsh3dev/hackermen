@@ -1,5 +1,5 @@
 import React from 'react'
-import mockData from "./mock-data.json"
+import mockData from "../mock-data.json"
 import PostCard from './PostCard'
 
 const PostsTab = () => {
@@ -8,9 +8,7 @@ const PostsTab = () => {
       
       {
         mockData.map((entry, index)=>(
-          <>
             <PostCard entry={entry} key={index} />
-          </>
         ))
       }
     </div>
