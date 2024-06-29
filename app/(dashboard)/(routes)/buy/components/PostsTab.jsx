@@ -13,9 +13,13 @@ const PostsTab = () => {
 
   const fetchOccasion = async () => {
     try {
-      const occasionDetails = await contractInstance.methods.getOccasion(1).call();
-      console.log(occasionDetails);
-      setOccasion(prevOccasions => [...prevOccasions, parseOccasionData(occasionDetails)]);
+      const totaloccasion = await contractInstance.methods.totalOccasions().call();
+      console.log('total occasion',totaloccasion.toString());
+      for(let i=1;i<=totaloccasion;i++){
+        const occasionDetails = await contractInstance.methods.getOccasion(i).call();
+        setOccasion(prevOccasions => [...prevOccasions, parseOccasionData(occasionDetails)]);
+        console.log(occasionDetails);
+      }
     } catch (err) {
       console.log('Error: ' + err.message);
     }
@@ -38,7 +42,6 @@ const PostsTab = () => {
     console.log(occas);
     return occas;
   };
-
   return (
     <div className='w-full min-h-[50vh] grid grid-cols-3 gap-2'>
       {occasion.length > 0 ? (

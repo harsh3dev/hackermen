@@ -22,6 +22,7 @@ export const FormComponent = () => {
   const [file, setFile] = useState();
 
   const onSubmit = async (data) => {
+    console.log(data);
     const accounts = await web3.eth.getAccounts();
     if (accounts.length === 0) {
       await window.ethereum.request({ method: 'eth_requestAccounts' });
@@ -42,8 +43,10 @@ export const FormComponent = () => {
       // Retrieve the occasion details using the event logs
       console.log(result);
       {/*const occasionId = result.events.OccasionListed.returnValues.occasionId; */}
-      const occasionDetails = await contractInstance.methods.getOccasion(1).call();
-      console.log(occasionDetails)
+      const occasionDetails = await contractInstance.methods.getOccasion(2).call();
+      const totaloccasion = await contractInstance.methods.totaloccasion().call();
+      console.log('total occasion',totaloccasion)
+      console.log(occasionDetails);
     } catch (err) {
       setMessage('Error: ' + err.message);
     }

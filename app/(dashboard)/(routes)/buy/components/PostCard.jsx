@@ -92,7 +92,11 @@ const callImage = () =>{
             </span>
         </div>
         
-        <Button onClick={()=>(setToggle(true))} className="">Buy Tickets</Button>
+        <Button onClick={()=>(setToggle(true))} className="">
+          <Link href={`/buy/${entry.id}`}>
+          Buy Tickets
+          </Link>
+        </Button>
         {/* {toggle && (
         <SeatChart
           
