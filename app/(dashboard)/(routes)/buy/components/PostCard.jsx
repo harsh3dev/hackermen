@@ -11,8 +11,19 @@ import photo from '@/public/photo.jpg'
 
 import Link from "next/link";
 import Image from "next/image";
+import Modal from "./Modal";
 
 const PostCard = ({ entry, className }) => {
+
+  const [open, setOpen] = React.useState(false);
+
+	const handleClose = () => {
+		setOpen(false);
+	};
+
+	const handleOpen = () => {
+		setOpen(true);
+	};
 
   function getRandomWord() {
     const eventRelatedWords = [
@@ -105,7 +116,13 @@ const callImage = () =>{
               ETH {entry.ticketPrice}{" "}
             </span>
         </div>
-        <Button className="">Buy Tickets</Button>
+        <Button onClick={handleOpen} className="">Buy Tickets</Button>
+        <Modal isOpen={open} onClose={handleClose}>
+				<>
+					<h1>GFG</h1>
+					<h3>A computer science portal!</h3>
+				</>
+			</Modal>
       </div>
     </Card>
   );
