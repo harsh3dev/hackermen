@@ -1,14 +1,19 @@
 "use client"
+
 import Link from "next/link"
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation'
+import { Web3 } from 'web3';
+
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetTrigger, SheetContent, SheetClose } from "@/components/ui/sheet"
-import { HiOutlineTicket } from "react-icons/hi2";
-import { useEffect, useState } from 'react';
-import { Web3 } from 'web3';
-import CopytoClipboard from "../CopytoClipboard/CopytoClipboard";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { usePathname } from 'next/navigation'
+import CopytoClipboard from "../CopytoClipboard/CopytoClipboard";
 
+import { HiOutlineTicket } from "react-icons/hi2";
+
+import { useDispatch } from "react-redux";
+import { setWallet } from "@/lib/store/features/walletSlice/walletSlice";
 
 export default function Navbar() {
 
@@ -26,20 +31,17 @@ export default function Navbar() {
       path: '/resell'
     },
   ]
+
   const pathname = usePathname();
   const [web3, setWeb3] = useState(null);
-  // const [warning, setWarning] = useState(null);
   const [provider, setProvider] = useState(null);
   const [chainId, setChainId] = useState(null);
   const [latestBlock, setLatestBlock] = useState(null);
   const [accountButtonDisabled, setAccountButtonDisabled] = useState(false);
   const [accounts, setAccounts] = useState(null);
   const [connectedAccount, setConnectedAccount] = useState(null);
-  // const [messageToSign, setMessageToSign] = useState(null);
-  // const [signingResult, setSigningResult] = useState(null);
-  // const [originalMessage, setOriginalMessage] = useState(null);
-  // const [signedMessage, setSignedMessage] = useState(null);
-  // const [signingAccount, setSigningAccount] = useState(null);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     // ensure that there is an injected the Ethereum provider
@@ -116,7 +118,7 @@ export default function Navbar() {
     // get the first account and populate placeholder
     setConnectedAccount(`${allAccounts[0]}`);
     
-    
+    dispatch(setWallet({address: allAccounts[0], chainID: chainId }));
   }
 
 
@@ -135,6 +137,7 @@ export default function Navbar() {
                 className="group relative flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
                 prefetch={false}
                 key={item.name}
+                style={{ color: pathname === item.path ? "var(--primary)" : "" }}
               >
                 <span >{item.name}</span>
                 <div className="absolute bottom-0 left-0 h-0.5 w-full scale-x-0 bg-primary transition-transform duration-300 group-hover:scale-x-100" />
@@ -142,7 +145,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div id="connectedAccount" className="inline-block" >
+        <div id="connectedAccount" className="inline-block" hidden={accountButtonDisabled} >
           { connectedAccount && <CopytoClipboard text={connectedAccount} /> }
           {/* { !accountButtonDisabled && 
             <Avatar>
@@ -150,7 +153,6 @@ export default function Navbar() {
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           } */}
-          
 
           {/* {connectedAccount} */}
         </div>
