@@ -42,28 +42,7 @@ const PostCard = ({ entry, className }) => {
 const callImage = () =>{
 
 }
-  function convertDateFormat(dateStr) {
-    const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-
-    const [day, month, year] = dateStr.split(".");
-
-    const monthName = months[parseInt(month, 10) - 1];
-
-    return `${day} ${monthName} ${year}`;
-  }
+  
 
   return (
     <Card className="w-full max-w-md min-h-[250px] px-5 py-4 flex flex-col justify-between items-start rounded-lg border border-slate-700 hover:border-green-300  dark:backdrop-blur-xl transition-all ease-linear bg-gradient-to-t from-green-800/30 to-transparent hover:from-green-800/50">
@@ -99,7 +78,7 @@ const callImage = () =>{
         <div className="flex items-center justify-between">
           <div className="text-muted-foreground">
             <CalendarIcon className="w-4 h-4 inline-block mr-2" />
-            {convertDateFormat(entry.date)} - {entry.time}
+            {entry.date} - {entry.time}
           </div>
         </div>
       </div>

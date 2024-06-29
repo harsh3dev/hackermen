@@ -1,4 +1,3 @@
-
 "use client"
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -6,11 +5,10 @@ import { Button } from "@/components/ui/button";
 import { SiEthereum } from "react-icons/si";
 import { IoMdPerson } from "react-icons/io";
 import { useForm } from "react-hook-form";
-
 import { ScrollArea } from "@/components/ui/scroll-area";
-
+import Web3 from "web3";
 import { useEffect, useState } from "react";
-
+import { web3, contractInstance } from '../../../../../lib/web3';
 import Image from "next/image";
 
 export const FormComponent = () => {
@@ -20,25 +18,47 @@ export const FormComponent = () => {
     formState: { errors },
     reset,
   } = useForm();
-  const onSubmit = (data) => {
-      data.image = file;
-    console.log(data);
-    console.log(errors);
+  const [message, setMessage] = useState('');
+  const [file, setFile] = useState();
+
+  const onSubmit = async (data) => {
+    const accounts = await web3.eth.getAccounts();
+    if (accounts.length === 0) {
+      await window.ethereum.request({ method: 'eth_requestAccounts' });
+    }
+
+    console.log(accounts)
+    try {
+      const result=await contractInstance.methods.listOccasion(
+        data["Event Name"],
+        web3.utils.toWei(data.Price.toString(), "ether"),
+        data["Max Seats"],
+        data.Date,
+        data.Time,
+        data.Location,
+        10 // Percentage hardcoded for now, you can make it dynamic if needed
+      ).send({ from: accounts[0] });
+      setMessage('Occasion listed successfully!');
+      // Retrieve the occasion details using the event logs
+      console.log(result);
+      {/*const occasionId = result.events.OccasionListed.returnValues.occasionId; */}
+      const occasionDetails = await contractInstance.methods.getOccasion(1).call();
+      console.log(occasionDetails)
+    } catch (err) {
+      setMessage('Error: ' + err.message);
+    }
     reset();
   };
-
-
-
-  const [file, setFile] = useState();
 
   function handleChange(e) {
     console.log(e.target.files);
     setFile(URL.createObjectURL(e.target.files[0]));
     console.log("file", file);
   }
-  useEffect(()=>{
+
+  useEffect(() => {
     console.log(file);
-  }, [file, setFile])
+  }, [file, setFile]);
 
   return (
         <form
