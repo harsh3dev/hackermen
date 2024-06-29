@@ -1,13 +1,25 @@
 "use client"
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
+import SeatChart from './SeatChart'
 
 import { IoLocationSharp } from "react-icons/io5";
 import { FiExternalLink } from "react-icons/fi";
 import { SiEthereum } from "react-icons/si";
 
-import photo from '@/public/photo.jpg'
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer"
+
+// import photo from '@/public/photo.jpg'
 
 import Link from "next/link";
 import Image from "next/image";
@@ -15,7 +27,8 @@ import Modal from "./Modal";
 
 const PostCard = ({ entry, className }) => {
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [toggle, setToggle] = useState(false)
 
 	const handleClose = () => {
 		setOpen(false);
@@ -25,24 +38,7 @@ const PostCard = ({ entry, className }) => {
 		setOpen(true);
 	};
 
-  function getRandomWord() {
-    const eventRelatedWords = [
-        "Performance",
-        "Festival",
-        "Screening",
-        "Exhibition",
-        "Premiere",
-        "Gala",
-        "Show",
-        "Recital",
-        "Ceremony",
-        "Spectacle"
-    ];
 
-    const randomIndex = Math.floor(Math.random() * eventRelatedWords.length);
-    return eventRelatedWords[randomIndex];
-}
-  
 const callImage = () =>{
 
 }
@@ -82,9 +78,9 @@ const callImage = () =>{
       </div>
       <CardContent className="p-6 space-y-4  flex justify-between items-center gap-4 w-full ">
 
-      <div className="grid place-items-center mx-auto p-2 w-[150px] h-[150px] border rounded-lg object-contain ">
+      {/* <div className="grid place-items-center mx-auto p-2 w-[150px] h-[150px] border rounded-lg object-contain ">
         <Image src={photo} alt="altimage" className="w-full h-full" />
-      </div>
+      </div> */}
 
       <div className="flex flex-col justify-between items-start gap-2">
         <div className="flex items-center justify-between">
@@ -109,20 +105,22 @@ const callImage = () =>{
       </div>
       </CardContent>
       <div className=" flex justify-between items-center text-base font-medium w-full mt-4 ">
-          <div className=" flex justify-center items-center gap-2 border border-yellow-200/50 p-2 rounded-md text-2xl ">
-            <SiEthereum className="text-yellow-400" />{" "}
-            <span className="bg-gradient-to-r from-yellow-200 to-amber-200 bg-clip-text text-transparent">
+          <div className=" flex justify-center items-center gap-2 border border-orange-200/50 p-2 rounded-md text-2xl ">
+            <SiEthereum className="text-red-400" />{" "}
+            <span className="bg-gradient-to-r from-red-200 to-red-200 bg-clip-text text-transparent">
               {" "}
-              ETH {entry.ticketPrice}{" "}
+              {entry.ticketPrice}{" "} AVA
             </span>
         </div>
-        <Button onClick={handleOpen} className="">Buy Tickets</Button>
-        <Modal isOpen={open} onClose={handleClose}>
-				<>
-					<h1>GFG</h1>
-					<h3>A computer science portal!</h3>
-				</>
-			</Modal>
+        
+        <Button onClick={()=>(setToggle(true))} className="">Buy Tickets</Button>
+        {/* {toggle && (
+        <SeatChart
+          
+          setToggle={setToggle}
+        />
+      )} */}
+        
       </div>
     </Card>
   );
@@ -219,50 +217,3 @@ function UserIcon(props) {
   )
 }
 
-
-
-
-
-
-
-
-
-{/* <div className="min-w-[350px] min-h-[250px] px-5 py-4 flex flex-col justify-between items-start rounded-lg border border-slate-500 hover:border-green-300  dark:backdrop-blur-xl transition-all ease-linear bg-gradient-to-t from-green-800/30 to-transparent hover:from-green-800/50 ">
-      <div className="w-full flex flex-col justify-between items-start rounded-lg ">
-        <div className=" w-full flex justify-between items-center">
-          <h1 className="font-bold text-2xl ">{entry.eventName}</h1>
-          <span className=" rounded-full text-sm flex justify-center items-center gap-1">
-            <IoLocationSharp />
-            {entry.location}
-          </span>
-        </div>
-
-        <div className=" w-full flex justify-between items-center mt-4 ">
-          <Link
-            href={entry.artistLink}
-            className="text-xl flex justify-center items-center gap-2 group "
-          >
-            {entry.artist}
-            <FiExternalLink className=" w-3 h-3 group-hover:inline-block hidden " />
-          </Link>
-          <span className=" text-sm text-secondary dark:text-primary ">
-            {convertDateFormat(entry.date)}
-          </span>
-        </div>
-
-        <div className=" w-full flex justify-start items-center gap-2 mb-4 mt-1 flex-wrap "></div>
-      </div>
-      <div className=" flex justify-between items-center text-base font-medium w-full mt-4 ">
-        <div className=" flex justify-center items-center gap-2 border border-yellow-200/50 p-2 rounded-md text-2xl ">
-          <SiEthereum className="text-yellow-400" />{" "}
-          <span className="bg-gradient-to-r from-yellow-200 to-amber-200 bg-clip-text text-transparent">
-            {" "}
-            ETH {entry.ticketPrice}{" "}
-          </span>
-        </div>
-
-        <Button className=" bg-primary dark:bg-primary hover:bg-secondary dark:hover:bg-secondary text-white dark:text-gray-950 dark:hover:text-white font-medium dark:font-bold transition-colors ease-in-out ">
-          <Link href={`/findteam/${entry.slug}`}>Buy Tickets</Link>
-        </Button>
-      </div>
-    </div> */}
