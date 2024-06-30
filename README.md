@@ -3,6 +3,36 @@
 ***Avalanche deployed project*** <br/>
 ***Contract Address - 0x652f19ffe1f9366d26e0d975124406a253fa2b43***
 
+                   
+<h1 align="center" style="font-weight: bold;">TickrNet - Hackermen H4B027</h1>
+
+
+<p align="center">Decentralized Ticket buying and selling platform hosted on Avalanche Blockchain</p>
+
+
+<p align="center">
+<a href="https://github.com/harsh3dev/hackermen">📱 Visit this Project</a>
+</p>
+ 
+<h2 id="technologies">💻 Technologies</h2>
+
+- list of all technologies you used
+- Next JS
+- Avalanche Blockchain Fuji testnet
+- Solidity
+- Hardhat
+- Web3 JS
+- Tailwind CSS
+- Shadcn UI
+ 
+<h3>Cloning</h3>
+
+How to clone your project
+
+```bash
+git clone https://github.com/harsh3dev/hackermen/
+```
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
