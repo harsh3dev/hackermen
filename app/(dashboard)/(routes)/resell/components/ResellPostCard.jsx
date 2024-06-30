@@ -2,30 +2,15 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
-import SeatChart from './SeatChart'
 
 import { IoLocationSharp } from "react-icons/io5";
 import { FiExternalLink } from "react-icons/fi";
 import { SiEthereum } from "react-icons/si";
 
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "@/components/ui/drawer"
-
-// import photo from '@/public/photo.jpg'
-
 import Link from "next/link";
 import Image from "next/image";
-import Modal from "./Modal";
 
-const PostCard = ({ entry, className }) => {
+const ResellPostCard = ({ entry, className }) => {
 
   const [open, setOpen] = useState(false);
   const [toggle, setToggle] = useState(false)
@@ -84,9 +69,9 @@ const callImage = () =>{
       </div>
       </CardContent>
       <div className=" flex justify-between items-center text-base font-medium w-full mt-4 ">
-          <div title={entry.ticketPrice} className=" flex justify-center max-w-[270px] items-center gap-2 border border-orange-200/50 p-2 rounded-md text-xl ">
+          <div className=" flex justify-center items-center gap-2 border border-orange-200/50 p-2 rounded-md text-xl ">
             <SiEthereum className="text-red-400" />{" "}
-            <span className="bg-gradient-to-r w-full truncate from-red-200 to-red-200 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-200 to-red-200 bg-clip-text text-transparent">
               {" "}
               {entry.ticketPrice}{" "} AVA
             </span>
@@ -109,7 +94,7 @@ const callImage = () =>{
   );
 };
 
-export default PostCard;
+export default ResellPostCard;
 
 
 

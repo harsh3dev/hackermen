@@ -123,11 +123,11 @@ export default function Navbar() {
 
 
   return (
-    <header className="fixed top-0 z-50 p-1 w-full bg-background/90 backdrop-blur-lg border-b ">
+    <header className="fixed top-0 z-50 p-1 w-full backdrop-blur-lg border-b bg-gray-900 ">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="#" className="flex items-center gap-2" prefetch={false}>
           <HiOutlineTicket className="h-6 w-6 text-primary" />
-          <span className="text-lg font-semibold text-primary">TicketChain</span>
+          <span className="text-lg font-semibold text-primary">TickrNet</span>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -177,7 +177,7 @@ export default function Navbar() {
             <div className="flex h-16 items-center justify-between px-4">
               <Link href="#" className="flex items-center gap-2" prefetch={false}>
                 <HiOutlineTicket className="h-6 w-6 text-primary" />
-                <span className="text-lg font-semibold text-primary">TicketChain</span>
+                <span className="text-lg font-semibold text-primary">TickrNet</span>
               </Link>
               <SheetClose className="rounded-full p-1 transition-colors hover:bg-muted">
                 <XIcon className="h-5 w-5 text-muted-foreground" />

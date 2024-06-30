@@ -5,7 +5,7 @@ import StoreProvider from "./StoreProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "TokenChain",
+  title: "TickrNet",
   description: "",
 };
 
